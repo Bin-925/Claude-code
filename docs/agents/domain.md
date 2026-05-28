@@ -1,17 +1,17 @@
-# Domain Docs
+# 도메인 문서
 
-How the engineering skills should consume this repo's domain documentation when exploring the codebase.
+코드베이스를 탐색할 때 엔지니어링 스킬들이 이 저장소의 도메인 문서를 읽는 방법입니다.
 
-## Before exploring, read these
+## 탐색 전에 읽어야 할 파일
 
-- **`CONTEXT.md`** at the repo root
-- **`docs/adr/`** — read ADRs that touch the area you're about to work in
+- 루트의 **`CONTEXT.md`**
+- **`docs/adr/`** — 작업할 영역과 관련된 ADR을 읽습니다
 
-If any of these files don't exist, **proceed silently**. Don't flag their absence; don't suggest creating them upfront. The producer skill (`/grill-with-docs`) creates them lazily when terms or decisions actually get resolved.
+파일이 없으면 **조용히 진행하세요**. 파일 부재를 알리거나 미리 생성을 제안하지 마세요. 생성 스킬(`/grill-with-docs`)이 용어나 결정이 실제로 확정될 때 지연 생성합니다.
 
-## File structure
+## 파일 구조
 
-Single-context repo:
+단일 컨텍스트 저장소:
 
 ```
 /
@@ -22,14 +22,14 @@ Single-context repo:
 └── src/
 ```
 
-## Use the glossary's vocabulary
+## 용어집의 어휘 사용
 
-When your output names a domain concept (in an issue title, a refactor proposal, a hypothesis, a test name), use the term as defined in `CONTEXT.md`. Don't drift to synonyms the glossary explicitly avoids.
+출력에서 도메인 개념을 명명할 때 (이슈 제목, 리팩터링 제안, 가설, 테스트 이름 등) `CONTEXT.md`에 정의된 용어를 사용합니다. 용어집이 명시적으로 피하도록 지정한 동의어로 흘러가지 마세요.
 
-If the concept you need isn't in the glossary yet, that's a signal — either you're inventing language the project doesn't use (reconsider) or there's a real gap (note it for `/grill-with-docs`).
+필요한 개념이 용어집에 없다면 신호입니다 — 프로젝트에서 쓰지 않는 언어를 만들고 있거나 (재검토 필요), 실제 공백이 있는 것입니다 (`/grill-with-docs`에 메모).
 
-## Flag ADR conflicts
+## ADR 충돌 명시
 
-If your output contradicts an existing ADR, surface it explicitly rather than silently overriding:
+출력이 기존 ADR과 충돌하면 조용히 덮어쓰지 말고 명시적으로 드러내세요:
 
-> _Contradicts ADR-0007 — but worth reopening because…_
+> _ADR-0007과 충돌 — 하지만 다음 이유로 재검토할 가치가 있습니다: …_
